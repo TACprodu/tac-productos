@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAC Productos - ¡Explora Nuestro Catálogo!</title>
+    <style>
+        body {
+            font-family: 'Arial Black', sans-serif;
+            background-color: #000;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .container {
+            max-width: 90%;
+            padding: 30px;
+            border: 3px solid #E1306C;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 25px #E1306C;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 15px #E1306C; }
+            to { box-shadow: 0 0 30px #FF00FF, 0 0 40px #E1306C; }
+        }
+        h1 {
+            color: #FFD700;
+            font-size: 28px;
+            text-shadow: 0 0 10px #E1306C;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 22px;
+            color: #00FFFF;
+            text-shadow: 0 0 8px #00FFFF;
+            margin: 25px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #E1306C, #FF00FF);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 15px #E1306C;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px #FF00FF;
+        }
+        .logo {
+            width: 180px; /* Ajusté el tamaño para tu logo */
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px #E1306C); /* Efecto neón */
+        }
+        .countdown {
+            font-size: 20px;
+            color: #FFD700;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- LOGO DE TAC PRODUCTOS (YA INTEGRADO) -->
+        <img src="https://i.ibb.co/7YfLZjK/tac-logo-optimized.png" alt="Logo TAC" class="logo">
+        
+        <h1>¿TE GUSTA EL CHISME? 😏</h1>
+        <p>¡PUES TE GUSTARÁN MUCHO MÁS<br>NUESTROS PRODUCTOS EN <strong>TAC</strong>! 🚀</p>
+        
+        <a href="https://www.instagram.com/tacproductoss?utm_source=qr&igsh=ZDZsanl4cnJic293" class="btn">¡VER AHORA EN INSTAGRAM!</a>
+        
+        <div class="countdown">Redirigiendo en <span id="count">5</span> segundos...</div>
+    </div>
+
+    <!-- Redirección automática con cuenta regresiva -->
+    <script>
+        let seconds = 5;
+        const countElement = document.getElementById('count');
+        
+        const countdown = setInterval(() => {
+            seconds--;
+            countElement.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(countdown);
+                window.location.href = "https://www.instagram.com/tacproductoss?utm_source=qr&igsh=ZDZsanl4cnJic293";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
